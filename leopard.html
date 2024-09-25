@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Animated Website with Scroll Delay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+    
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           background-image: url('https://tse3.mm.bing.net/th?id=OIP.AFEds3f5UZH80GE_F1DWcQHaEy&pid=Api&P=0&h=220');
+           background-position: center;
+           background-size: cover;
+        }
+        h1,h2{
+            text-align: center;
+            margin: 20px;
+            text-decoration: underline;
+            font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+   font-size: 40px;
+  font-style: normal;
+          
+}
+        
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+         border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .content img {
+           width: 350px;
+            height: auto;
+            border-radius: 50px;
+        }
+       
+      
+       
+        .content:nth-child(odd) {
+            flex-direction: row;
+            
+        }
+
+        .content:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .text {
+            max-width: 600px;
+            
+            padding: 10px;
+            color: #000;
+            text-align: center;
+            font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+   
+  font-style: normal;
+        }
+        .short{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 40px;
+        }
+        .first{
+            
+            margin: 25px;
+            padding: 25px;
+        }
+        .second{
+           
+            margin: 25px;
+            padding: 25px;
+            
+        }
+        .third{
+            
+            margin: 25px;
+            padding: 25px;
+            
+         
+        }
+        .fourth{
+            
+            margin: 25px;
+            padding: 25px;
+        }
+        .fifth{
+           
+            margin: 25px;
+            padding: 25px;
+            
+        
+        }
+        .sixth{
+            
+            margin: 25px;
+            padding: 25px;
+            
+        }
+        .seventh{
+            
+            margin: 25px;
+            padding: 25px;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>THE LEOPARD</h1>
+    <div class="container">
+        
+        <div class="content" data-animation="slideInFromRight">
+            <img class="first" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/African_leopard_male_%28cropped%29.jpg/330px-African_leopard_male_%28cropped%29.jpg" alt="Image 2">
+            <div class="text">
+                <h2>Intrpduction</h2>
+                <p>The leopard (Panthera pardus) is one of the five extant species in the genus Panthera. It has a pale yellowish to dark golden fur with dark spots grouped in rosettes. Its body is slender and muscular reaching a length of 92–183 cm (36–72 in) with a 66–102 cm (26–40 in) long tail and a shoulder height of 60–70 cm (24–28 in). Males typically weigh 30.9–72 kg (68–159 lb), and females 20.5–43 kg (45–95 lb).
+
+                    The leopard was first described in 1758, and several subspecies were proposed in the 19th and 20th centuries. Today, eight subspecies are recognised in its wide range in Africa and Asia. </p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="second" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Leopard_distribution.jpg" alt="Image 2">
+            <div class="text">
+                <h2>Etymology</h2>
+                <p>The English name "leopard" comes from Old French leupart or Middle French liepart, that derives from Latin leopardus and ancient Greek λέοπάρδος (leopardos). Leopardos could be a compound of λέων (leōn), meaning 'lion', and πάρδος (pardos), meaning 'spotted'.[3][4][5] The word λέοπάρδος originally referred to a cheetah (Acinonyx jubatus).[6]
+
+                    "Panther" is another common name, derived from Latin panther and ancient Greek πάνθηρ (pánthēr);[3] The generic name Panthera originates in Latin panthera, a hunting net for catching wild beasts to be used by the Romans in combats.[7] Pardus is the masculine singular form.</p>
+            </div>
+        </div>
+
+       
+
+        <div class="content" data-animation="slideInFromRight">
+            <img class="third" src="https://i.pinimg.com/474x/47/78/30/47783011b79e9e55d3dc0a536212aa69.jpg" alt="Image 4">
+            <div class="text">
+                <h2>Living subspecies</h2>
+                <p>
+                    <UL>
+                        <li>African leopard</li>
+                        <li>Indian leopard</li>
+                        <li>Javan leopard</li>
+                        <li>Arabian leopard</li>
+                        <li>Amur leopard </li>
+                        <li>Indochinese leopard</li>
+                        <li>Sri Lankan leopard </li>
+                    </UL>
+                </p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="fourth" src="https://i.pinimg.com/474x/48/c9/ad/48c9adefb9482933e7f0d06133ac0f7e.jpg" alt="image-5">
+            <div class="text">
+                <h2>Evolution</h2>
+                <p>Results of phylogenetic studies based on nuclear DNA and mitochondrial DNA analysis showed that the last common ancestor of the Panthera and Neofelis genera is thought to have lived about 6.37 million years ago. Neofelis diverged about 8.66 million years ago from the Panthera lineage. The tiger diverged about 6.55 million years ago, followed by the snow leopard about 4.63 million years ago and the leopard about 4.35 million years ago. The leopard is a sister taxon to a clade within Panthera, consisting of the lion and the jaguar.[36][37]
+
+                    Results of a phylogenetic analysis of chemical secretions amongst cats indicated that the leopard is closely related to the lion.[40] The geographic origin of the Panthera is most likely northern Central Asia.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromRight">
+            <img class="fifth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Leopard_skeleton_%28black_background%29.jpg/300px-Leopard_skeleton_%28black_background%29.jpg">
+            <div class="text">
+                <h2>Characteristics</h2>
+                <p>The leopard's fur is generally soft and thick, notably softer on the belly than on the back.[57] Its skin colour varies between individuals from pale yellowish to dark golden with dark spots grouped in rosettes. Its underbelly is white and its ringed tail is shorter than its body. Its pupils are round.[58] Leopards living in arid regions are pale cream, yellowish to ochraceous and rufous in colour; those living in forests and mountains are much darker and deep golden. Spots fade toward the white underbelly and the insides and lower parts of the legs.[59] Rosettes are circular in East African leopard populations, and tend to be squarish in Southern African and larger in Asian leopard populations. The fur tends to be grayish in colder climates, and dark golden in rainforest habitats.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="sixth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Persian_Leopard_Fur_02.JPG/300px-Persian_Leopard_Fur_02.JPG">
+            <div class="text">
+                <h2>COAT</h2>
+                <p>Rosette patterns are unique in each individual.[61][62] This pattern is thought to be an adaptation to dense vegetation with patchy shadows, where it serves as camouflage.[63]
+
+                    Its white-tipped tail is about 60–100 cm (23.6–39.4 in) long, white underneath and with spots that form incomplete bands toward the end of the tail.[64] The guard hairs protecting the basal hairs are short, 3–4 mm (0.1–0.2 in) in face and head, and increase in length toward the flanks and the belly to about 25–30 mm (1.0–1.2 in). Juveniles have woolly fur that appear to be dark-coloured due to the densely arranged spots.[61][65] Its fur tends to grow longer in colder climates.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromRight">
+            <img class="seventh" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Edgar_Grooming_%2849611421486%29.jpg/1920px-Edgar_Grooming_%2849611421486%29.jpg">
+            <div class="text">
+                <h2>Distribution and habitat</h2>
+                <p>The leopard has the largest distribution of all wild cats, occurring widely in Africa and Asia, although populations are fragmented and declining.[2] It inhabits foremost savanna and rainforest, and areas where grasslands, woodlands and riparian forests remain largely undisturbed.[60] It also persists in urban environments, if it is not persecuted, has sufficient prey and patches of vegetation for shelter during the day.[79]
+
+                    The leopard's range in West Africa is estimated to have drastically declined by 95%, and in the Sahara desert by 97%.[80] In sub-Saharan Africa, it is still numerous and surviving in marginal habitats where other large cats have disappeared.[81] In southeastern Egypt, an individual found killed in 2017 was the first sighting of the leopard in this area in 65 years.[</p>
+            </div>
+        </div>
+        
+    </div>
+    <h2 class="head">Here's a Short Discovery Video For You</h2>
+    <div class="short">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kzpJYc6MUzk?si=xzR3dwgK2BW0GOx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // Function to check if the element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scroll event and apply animations
+        function handleScroll() {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                if (isInViewport(content)) {
+                    content.style.animationName = content.getAttribute('data-animation');
+                }
+            });
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        // Run the function on page load as well
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>

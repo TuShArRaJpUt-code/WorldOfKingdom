@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Animated Website with Scroll Delay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+    
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           background-image: url('https://i.pinimg.com/474x/4f/2c/db/4f2cdb6ad9a67436150d26084d248847.jpg');
+           background-position: center;
+           background-size: cover;
+        }
+        h1,h2{
+            text-align: center;
+            margin: 20px;
+            text-decoration: underline;
+            font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+   font-size: 40px;
+  font-style: normal;
+  color: #fff;
+          
+}
+        
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+         border-radius: 50px;
+          border: 2px solid #fff;  
+         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .content img {
+           width: 350px;
+            height: auto;
+            border-radius: 50px;
+            border: 2px solid#fff;
+        }
+       
+      
+       
+        .content:nth-child(odd) {
+            flex-direction: row;
+            
+        }
+
+        .content:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .text {
+            max-width: 600px;
+            
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+   
+  font-style: normal;
+        }
+        .short{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 40px;
+        }
+        .first{
+            
+            margin: 25px;
+            padding: 25px;
+        }
+        .second{
+           
+            margin: 25px;
+            padding: 25px;
+            
+        }
+        .third{
+            
+            margin: 25px;
+            padding: 25px;
+            
+         
+        }
+        .fourth{
+            
+            margin: 25px;
+            padding: 25px;
+        }
+        .fifth{
+           
+            margin: 25px;
+            padding: 25px;
+            
+        
+        }
+        .sixth{
+            
+            margin: 25px;
+            padding: 25px;
+            
+        }
+        .seventh{
+            
+            margin: 25px;
+            padding: 25px;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>THE SQUID</h1>
+    <div class="container">
+        
+        <div class="content" data-animation="slideInFromRight">
+            <img class="first" src="https://i.pinimg.com/474x/25/a3/64/25a3649561e2bfcb32efb98f33afd9f6.jpg" alt="Image 2">
+            <div class="text">
+                <h2>Introduction</h2>
+                <p>Cephalopods became dominant during the Ordovician period, represented by primitive nautiloids. The class now contains two, only distantly related, extant subclasses: Coleoidea, which includes octopuses, squid, and cuttlefish; and Nautiloidea, represented by Nautilus and Allonautilus. In the Coleoidea, the molluscan shell has been internalized or is absent, whereas in the Nautiloidea, the external shell remains. About 800 living species of cephalopods have been identified. Two important extinct taxa are the Ammonoidea (ammonites) and Belemnoidea (belemnites). Extant cephalopods range in size from the 10 mm (0.3 in) Idiosepius thailandicus to the 14 m (45.1 ft) colossal squid, the largest extant invertebrate.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="second" src="https://i.pinimg.com/564x/76/16/17/761617bb010f21d730f88b41f760a662.jpg" alt="Image 2">
+            <div class="text">
+                <h2>Description</h2>
+                <p>There are over 800 extant species of cephalopod,[3] although new species continue to be described. An estimated 11,000 extinct taxa have been described, although the soft-bodied nature of cephalopods means they are not easily fossilised.[4]
+
+                    Cephalopods are found in all the oceans of Earth. None of them can tolerate fresh water, but the brief squid, Lolliguncula brevis, found in Chesapeake Bay, is a notable partial exception in that it tolerates brackish water.[5] Cephalopods are thought to be unable to live in fresh water due to multiple biochemical constraints, and in their >400 million year existence have never ventured into fully freshwater habitats. </p>
+            </div>
+        </div>
+
+       
+
+        <div class="content" data-animation="slideInFromRight">
+            <img class="third" src="https://i.pinimg.com/564x/98/b1/c5/98b1c5b170fc64cac4bcb5e0932a5c30.jpg" alt="Image 4">
+            <div class="text">
+                <h2>Nervous system and behavior</h2>
+                <p>Cephalopods are widely regarded as the most intelligent of the invertebrates and have well developed senses and large brains (larger than those of gastropods).[9] The nervous system of cephalopods is the most complex of the invertebrates[10][11] and their brain-to-body-mass ratio falls between that of endothermic and ectothermic vertebrates.[8]: 14  Captive cephalopods have also been known to climb out of their aquaria, maneuver a distance of the lab floor, enter another aquarium to feed on captive crabs, and return to their own aquarium.[12]
+
+                    The brain is protected in a cartilaginous cranium. The giant nerve fibers of the cephalopod mantle have been widely used for many years as experimental material in neurophysiology; their large diameter (due to lack of myelination) makes them relatively easy to study compared with other animals.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="fourth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Nautilus_pompilius_%28head%29.jpg/375px-Nautilus_pompilius_%28head%29.jpg" alt="image-5">
+            <div class="text">
+                <h2>Senses</h2>
+                <p>Most cephalopods rely on vision to detect predators and prey and to communicate with one another.[19] Consequently, cephalopod vision is acute: training experiments have shown that the common octopus can distinguish the brightness, size, shape, and horizontal or vertical orientation of objects. The morphological construction gives cephalopod eyes the same performance as shark eyes; however, their construction differs, as cephalopods lack a cornea and have an everted retina.[19] Cephalopods' eyes are also sensitive to the plane of polarization of light.[20] Unlike many other cephalopods, nautiluses do not have good vision; their eye structure is highly developed, but lacks a solid lens. They have a simple "pinhole" eye through which water can pass. Instead of vision, the animal is thought to use olfaction as the primary sense for foraging, as well as locating or identifying potential mates.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromRight">
+            <img class="fifth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ocythoe_tuberculata_viscera.jpg/375px-Ocythoe_tuberculata_viscera.jpg">
+            <div class="text">
+                <h2>Circulatory system</h2>
+                <p>Cephalopods are the only molluscs with a closed circulatory system. Coleoids have two gill hearts (also known as branchial hearts) that move blood through the capillaries of the gills. A single systemic heart then pumps the oxygenated blood through the rest of the body.[50]
+
+                    Like most molluscs, cephalopods use hemocyanin, a copper-containing protein, rather than hemoglobin, to transport oxygen. As a result, their blood is colorless when deoxygenated and turns blue when bonded to oxygen.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="sixth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Octopus3.jpg/330px-Octopus3.jpg">
+            <div class="text">
+                <h2>Locomotion and buoyancy</h2>
+                <p>While most cephalopods can move by jet propulsion, this is a very energy-consuming way to travel compared to the tail propulsion used by fish.[63] The efficiency of a propeller-driven waterjet (i.e. Froude efficiency) is greater than a rocket.[64] The relative efficiency of jet propulsion decreases further as animal size increases; paralarvae are far more efficient than juvenile and adult individuals.[65] Since the Paleozoic era, as competition with fish produced an environment where efficient motion was crucial to survival, jet propulsion has taken a back role, with fins and tentacles used to maintain a steady velocity.</p>
+            </div>
+        </div>
+      
+        
+    </div>
+    <h2 class="head">Here's a Short Discovery Video For You</h2>
+    <div class="short">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/M9WmFbXQVCY?si=1LV9op-DQP_8_KKO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // Function to check if the element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scroll event and apply animations
+        function handleScroll() {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                if (isInViewport(content)) {
+                    content.style.animationName = content.getAttribute('data-animation');
+                }
+            });
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        // Run the function on page load as well
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>

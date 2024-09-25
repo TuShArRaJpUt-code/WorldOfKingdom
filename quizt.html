@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz Game</title>
+   <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-image: url('https://i.pinimg.com/474x/69/8c/7a/698c7ae4b67d19b622da1cbe9cc9a5dc.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.quiz-container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('https://i.pinimg.com/474x/39/ec/7e/39ec7e791c18fc7645ebebfa18d688bb.jpg');
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFF;
+}
+
+.question {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.choices button {
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.choices button:hover {
+    background-color:gray;
+}
+
+.next-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    background-color: #000;
+    color: white;
+    border-radius: 20px;
+}
+
+.result {
+    font-size: 2em;
+    margin-top: 20px;
+}
+.back{
+    width: 80px;
+    height: 30px;
+    background-color: yellowgreen;
+    color: #f4f4f4;
+    border-radius: 20px;
+}
+.back:hover{
+    transform: scale(1.2);
+}
+   </style>
+</head>
+<body>
+    <div class="back"><a href="game_section.html"><button class="back">BACK</button></a></div>
+    <div class="quiz-container">
+        <h1>Animal Trivia Quiz</h1>
+        <div id="question" class="question"></div>
+        <div id="choices" class="choices"></div>
+        <button id="nextButton" class="next-button">Next</button>
+    </div>
+    <div id="result" class="result"></div>
+ 
+    <script>
+        const quizData = [
+    {
+        question: "Which animal is known as the king of the jungle?",
+        choices: ["Lion", "Elephant", "Tiger", "Giraffe"],
+        answer: "Lion"
+    },
+    {
+        question: "Which bird is the fastest flying bird?",
+        choices: ["Eagle", "Peregrine Falcon", "Sparrow", "Hummingbird"],
+        answer: "Peregrine Falcon"
+    },
+    {
+        question: "Which sea creature has three hearts?",
+        choices: ["Dolphin", "Octopus", "Whale", "Shark"],
+        answer: "Octopus"
+    },
+    {
+        question: "Which mammal lays eggs?",
+        choices: ["Kangaroo", "Platypus", "Elephant", "Koala"],
+        answer: "Platypus"
+    },
+    {
+        question: "Which is the largest land animal?",
+        choices: ["Giraffe", "Elephant", "Rhino", "Hippo"],
+        answer: "Elephant"
+    }
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+const questionElement = document.getElementById("question");
+const choicesElement = document.getElementById("choices");
+const nextButton = document.getElementById("nextButton");
+const resultElement = document.getElementById("result");
+
+// Function to start the quiz and display the first question
+function startQuiz() {
+    showQuestion();
+    nextButton.style.display = "none"; // Hide next button initially
+}
+
+// Function to show the current question
+function showQuestion() {
+    const currentQuestion = quizData[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+    choicesElement.innerHTML = ""; // Clear previous choices
+
+    currentQuestion.choices.forEach(choice => {
+        const button = document.createElement("button");
+        button.textContent = choice;
+        button.classList.add("choice");
+        button.addEventListener("click", selectAnswer);
+        choicesElement.appendChild(button);
+    });
+}
+
+// Function to handle selecting an answer
+function selectAnswer(event) {
+    const selectedChoice = event.target.textContent;
+    const correctAnswer = quizData[currentQuestionIndex].answer;
+
+    if (selectedChoice === correctAnswer) {
+        score++;
+    }
+
+    disableChoices();
+    nextButton.style.display = "block"; // Show next button after selecting an answer
+}
+
+// Disable the choices once an answer is selected
+function disableChoices() {
+    const choiceButtons = document.querySelectorAll(".choice");
+    choiceButtons.forEach(button => {
+        button.disabled = true;
+    });
+}
+
+// Function to move to the next question or show results
+nextButton.addEventListener("click", () => {
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < quizData.length) {
+        showQuestion(); // Show next question
+        nextButton.style.display = "none"; // Hide next button again
+    } else {
+        showResults(); // Show final results
+    }
+});
+
+// Function to show the final score and result
+function showResults() {
+    questionElement.style.display = "none"; // Hide question
+    choicesElement.style.display = "none"; // Hide choices
+    nextButton.style.display = "none"; // Hide next button
+
+    resultElement.textContent =` You scored ${score} out of ${quizData.length}!`;
+}
+
+// Start the quiz when the page loads
+startQuiz();
+    </script>
+</body>
+</html>

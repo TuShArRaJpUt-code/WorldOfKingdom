@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanded Card Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .card {
+            background-color: #fff;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card p {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .card .details {
+            display: none;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .card:hover .details {
+            display: block;
+            margin-top: 10px;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: #000;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Welcome message styling */
+        /* Welcome message styling */
+/* Welcome message styling (cloud-like shape) */
+.welcome-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    word-wrap: break-word;
+    text-align: center;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .card {
+                width: 80%;
+            }
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-content">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="/videos/sunset.mp4" type="video/mp4">
+        </video>
+        <h1>EXPLORE ANIMAL KINGDOMS</h1>
+        <div class="gallery">
+            <div class="card">
+                <a href="new_gallery.html"><img src="images/mammal.avif" alt="Card Image 1"></a>
+                <div class="card-content">
+                    <h3>MAMMAL WORLD</h3>
+                    <p>Hi! Welcome to our mammal world</p>
+                    <p class="details">If you want to know more about mammal world, click on me.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="cardwatergallery.html"><img src="images/ocean.jpg" alt="Card Image 2"></a>
+                <div class="card-content">
+                    <h3>OCEAN WORLD</h3>
+                    <p>Hi! Welcome to our ocean world</p>
+                    <p class="details">If you want to know more about ocean world, click on me.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="feather.html"><img src="images/feather.jpg" alt="Card Image 3"></a>
+                <div class="card-content">
+                    <h3>FEATHER WORLD</h3>
+                    <p>Hi! Welcome to our feather world</p>
+                    <p class="details">If you want to know more about feather world, click on me.</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="game_section.html"><img src="images/game.jpg" alt="Card Image 1"></a>
+                <div class="card-content">
+                    <h3>GAME SECTION</h3>
+                    <p>GAMES</p>
+                    <p class="details">You can plays games on the knowledge you gain  </p>
+                </div>
+        </div>
+
+        <!-- Welcome message will be injected here -->
+        <div id="welcomeMessage" class="welcome-message"></div>
+
+    </div>
+
+    <script>
+        // Function to retrieve the username from the URL
+        function getUsernameFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('name');
+        }
+
+        // Display the welcome message
+        window.onload = function() {
+            const username = getUsernameFromUrl();
+            if (username) {
+                document.getElementById('welcomeMessage').textContent =` Hi , ${username} welcome you to our world of kingdom here you can click on any wolrd and start exploring `;
+            } else {
+                document.getElementById('welcomeMessage').textContent = 'Welcome, Guest!';
+            }
+        };
+    </script>
+</body>
+</html>
