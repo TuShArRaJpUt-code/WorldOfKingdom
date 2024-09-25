@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Animated Website with Scroll Delay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+    
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           background-image: url('https://i.pinimg.com/474x/4f/2c/db/4f2cdb6ad9a67436150d26084d248847.jpg');
+           background-position: center;
+           background-size: cover;
+        }
+        h1,h2{
+            text-align: center;
+            margin: 20px;
+            text-decoration: underline;
+            font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+   font-size: 40px;
+  font-style: normal;
+  color: #fff;
+          
+}
+        
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+         border-radius: 50px;
+          border: 2px solid #fff;  
+         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .content img {
+           width: 350px;
+            height: auto;
+            border-radius: 50px;
+            border: 2px solid#fff;
+        }
+       
+      
+       
+        .content:nth-child(odd) {
+            flex-direction: row;
+            
+        }
+
+        .content:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .text {
+            max-width: 600px;
+            
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+   
+  font-style: normal;
+        }
+        .short{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 40px;
+        }
+        .first{
+            
+            margin: 25px;
+            padding: 25px;
+        }
+        .second{
+           
+            margin: 25px;
+            padding: 25px;
+            
+        }
+        .third{
+            
+            margin: 25px;
+            padding: 25px;
+            
+         
+        }
+        .fourth{
+            
+            margin: 25px;
+            padding: 25px;
+        }
+        .fifth{
+           
+            margin: 25px;
+            padding: 25px;
+            
+        
+        }
+        .sixth{
+            
+            margin: 25px;
+            padding: 25px;
+            
+        }
+        .seventh{
+            
+            margin: 25px;
+            padding: 25px;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>THE JELLY FISH</h1>
+    <div class="container">
+        
+        <div class="content" data-animation="slideInFromRight">
+            <img class="first" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Jelly_cc11.jpg/330px-Jelly_cc11.jpg" alt="Image 2">
+            <div class="text">
+                <h2>Introduction</h2>
+                <p>Jellyfish, also known as sea jellies, are the medusa-phase of certain gelatinous members of the subphylum Medusozoa, which is a major part of the phylum Cnidaria.
+
+                    Jellyfish are mainly free-swimming marine animals with umbrella-shaped bells and trailing tentacles, although a few are anchored to the seabed by stalks rather than being mobile. The bell can pulsate to provide propulsion for efficient locomotion. The tentacles are armed with stinging cells and may be used to capture prey and defend against predators. Jellyfish have a complex life cycle. The medusa is normally the sexual phase, which produces planula larvae.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="second" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_guide_to_the_fossil_invertebrate_animals_in_the_Department_of_geology_and_palaeontology_in_the_British_museum_%28Natural_history%29_%281907%29_%2814799088733%29.jpg/330px-A_guide_to_the_fossil_invertebrate_animals_in_the_Department_of_geology_and_palaeontology_in_the_British_museum_%28Natural_history%29_%281907%29_%2814799088733%29.jpg" alt="Image 2">
+            <div class="text">
+                <h2>Fossil history
+                </h2>
+                <p>Since jellyfish have no hard parts, fossils are rare. The oldest unambiguous fossil of a free-swimming medusa is Burgessomedusa from the mid-Cambrian Burgess Shale of Canada, which is likely either a stem group of box jellyfish (Cubozoa) or Acraspeda (the clade including Staurozoa, Cubozoa, and Scyphozoa). Other claimed records from the Cambrian of China and Utah in the United States are uncertain, and possibly represent ctenophores instead.
+
+                    </p>
+            </div>
+        </div>
+
+       
+
+        <div class="content" data-animation="slideInFromRight">
+            <img class="third" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Anatomy_of_a_jellyfish-en.svg/435px-Anatomy_of_a_jellyfish-en.svg.png" alt="Image 4">
+            <div class="text">
+                <h2>Anatomy</h2>
+                <p>The main feature of a true jellyfish is the umbrella-shaped bell. This is a hollow structure consisting of a mass of transparent jelly-like matter known as mesoglea, which forms the hydrostatic skeleton of the animal.[25] The mesoglea is 95% or more composed of water,[30] and also contains collagen and other fibrous proteins, as well as wandering amebocytes that can engulf debris and bacteria. The mesogloea is bordered by the epidermis on the outside and the gastrodermis on the inside. The edge of the bell is often divided into rounded lobes known as lappets, which allow the bell to flex. In the gaps or niches between the lappets are dangling rudimentary sense organs known as rhopalia, and the margin of the bell often bears tentacles.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="fourth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Jellyfish_aqurium.jpg/330px-Jellyfish_aqurium.jpg" alt="image-5">
+            <div class="text">
+                <h2>Aquarium display</h2>
+                <p>Jellyfish are displayed in many public aquariums. Often the tank's background is blue and the animals are illuminated by side light, increasing the contrast between the animal and the background. In natural conditions, many jellies are so transparent that they are nearly invisible.[138] Jellyfish are not adapted to closed spaces. They depend on currents to transport them from place to place. Professional exhibits as in the Monterey Bay Aquarium feature precise water flows, typically in circular tanks to avoid trapping specimens in corners</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromRight">
+            <img class="fifth" src="https://i.pinimg.com/474x/b9/79/86/b97986f570273a69750a0cad521ef59e.jpg">
+            <div class="text">
+                <h2>Evolution</h2>
+                <p>Experimental evidence for photosensitivity and photoreception in cnidarians antecedes the mid 1900s, and a rich body of research has since covered evolution of visual systems in jellyfish.[41] Jellyfish visual systems range from simple photoreceptive cells to complex image-forming eyes. More ancestral visual systems incorporate extraocular vision (vision without eyes) that encompass numerous receptors dedicated to single-function behaviors. More derived visual systems comprise perception that is capable of multiple task-guided behaviors.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="sixth" src="https://i.pinimg.com/474x/78/9c/6e/789c6e7044b0575b30b8411ba6dca1ac.jpg">
+            <div class="text">
+                <h2>Diet</h2>
+                <p>Jellyfish are, like other cnidarians, generally carnivorous (or parasitic),[78] feeding on planktonic organisms, crustaceans, small fish, fish eggs and larvae, and other jellyfish, ingesting food and voiding undigested waste through the mouth. They hunt passively using their tentacles as drift lines, or sink through the water with their tentacles spread widely; the tentacles, which contain nematocysts to stun or kill the prey, may then flex to help bring it to the mouth.[25] Their swimming technique also helps them to capture prey; when their bell expands it sucks in water which brings more potential prey within reach of the tentacles.</p>
+            </div>
+        </div>
+       
+        
+        
+    </div>
+    <h2 class="head">Here's a Short Discovery Video For You</h2>
+    <div class="short">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LogI9wVxCWg?si=dvPZtswCmiGpio4m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // Function to check if the element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scroll event and apply animations
+        function handleScroll() {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                if (isInViewport(content)) {
+                    content.style.animationName = content.getAttribute('data-animation');
+                }
+            });
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        // Run the function on page load as well
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>

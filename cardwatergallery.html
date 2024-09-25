@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Card Gallery with Links</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('images/2GALLERY.jpeg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90vw;
+            height: 90vh;
+            overflow: hidden;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+
+        }
+
+        .card {
+            position: relative;
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            transition: flex 0.5s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            text-align: center;
+            border-radius: 50px;
+            gap: 20px;
+            border: 2px solid transparent;
+            margin-left: 2.5px;
+            margin-right: 2.5px;
+
+        }
+
+        .card:hover {
+            flex: 4;
+            font-size: 24px;
+        }
+
+        .card a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Individual card images */
+        .card-1 { background-image: url('https://i.pinimg.com/474x/b3/57/97/b35797acbe42a6f472d7ce142f374422.jpg'); }
+        .card-2 { background-image: url('https://i.pinimg.com/564x/fa/29/a2/fa29a27feef0acf54b819764eb74efd7.jpg'); }
+        .card-3 { background-image: url('https://i.pinimg.com/564x/72/55/90/725590bf2e95eda44b49148d1786d9f9.jpg'); }
+        .card-4 { background-image: url('https://i.pinimg.com/474x/df/68/42/df68424e6b66167e8f2dc2df6c35c16e.jpg'); }
+        .card-5 { background-image: url('https://i.pinimg.com/474x/6d/ad/7a/6dad7ad65b39528a8ca188051ee178c0.jpg'); }
+        .card-6 { background-image: url('https://i.pinimg.com/474x/b3/63/45/b3634514e68a6f434b0b520675d42da4.jpg'); }
+        .card-7 { background-image: url('https://i.pinimg.com/474x/c5/0b/24/c50b24231e23909f6f3a4690f7385eb6.jpg'); }
+        .card-8 { background-image: url('https://i.pinimg.com/474x/bb/cd/a5/bbcda56b44ec79d16b954f14c216157e.jpg'); }
+        .card-9 { background-image: url('https://i.pinimg.com/474x/bb/a0/c5/bba0c5a0ba8ef29c7904c915b517926b.jpg'); }
+        .card-10 { background-image: url('https://i.pinimg.com/474x/14/a3/e4/14a3e43cef6140012afaeba4675ff544.jpg'); }
+        .card-11 { background-image: url('https://i.pinimg.com/564x/25/8b/1e/258b1e3c259f26db70011dd8a69bd3ce.jpg'); }
+        .card-12 { background-image: url('https://i.pinimg.com/474x/a2/08/3b/a2083b6f2cc95fb5a0137ebe798c070c.jpg'); }
+        .card-13 { background-image: url('https://i.pinimg.com/474x/25/a3/64/25a3649561e2bfcb32efb98f33afd9f6.jpg'); }
+        .card-14 { background-image: url('https://i.pinimg.com/474x/c0/0e/f5/c00ef5f125e4d5d97fa75d9231490f1d.jpg'); }
+        .card-15 { background-image: url('https://i.pinimg.com/474x/82/38/41/8238418adf2835e3257b0c730960ff1b.jpg'); }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+                height: auto;
+            }
+            .card {
+                flex: 1;
+                width: 100%;
+            }
+            .card:hover {
+                flex: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>EXPLORE THE WATER KINGDOM</h1>
+    <div class="gallery">
+        <!-- 15 Cards with Links -->
+        <div class="card card-1">
+            <a href="seahorse.html" target="_blank">SEA HORSE</a>
+        </div>
+        <div class="card card-2">
+            <a href="irrawaddy_dolphin.html" target="_blank">IRRAWADDY DOLPHIN</a>
+        </div>
+        <div class="card card-3">
+            <a href="blue_whale.html" target="_blank">BLUE WHALE</a>
+        </div>
+        <div class="card card-4">
+            <a href="shark.html" target="_blank">SHARK</a>
+        </div>
+        <div class="card card-5">
+            <a href="dolphin.html" target="_blank">DOLPHIN</a>
+        </div>
+        <div class="card card-6">
+            <a href="jelly_fish.html" target="_blank">JELLY FISH</a>
+        </div>
+        <div class="card card-7">
+            <a href="octopus.html" target="_blank">OCTOPUS</a>
+        </div>
+        <div class="card card-8">
+            <a href="sting_ray.html" target="_blank">STING RAY</a>
+        </div>
+        <div class="card card-9">
+            <a href="eel.html" target="_blank">ELECTRIC ELE</a>
+        </div>
+        <div class="card card-10">
+            <a href="goblin_shark.html" target="_blank">GOBLIN SHARK</a>
+        </div>
+        <div class="card card-11">
+            <a href="vaquita.html" target="_blank">VAQUTIA</a>
+        </div>
+        <div class="card card-12">
+            <a href="axolotia.html" target="_blank">AXOLOTIA</a>
+        </div>
+        <div class="card card-13">
+            <a href="squid.html" target="_blank">SQUID</a>
+        </div>
+        <div class="card card-14">
+            <a href="devil_hole_pupfish.html" target="_blank">DEVIL HOLE PUPFISH</a>
+        </div>
+        <div class="card card-15">
+            <a href="saw_fish.html" target="_blank">SAW FISH</a>
+        </div>
+    </div>
+</body>
+</html>

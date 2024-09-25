@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Website with Scroll Delay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://tse3.mm.bing.net/th?id=OIP.AFEds3f5UZH80GE_F1DWcQHaEy&pid=Api&P=0&h=220');
+           background-position: center;
+           background-size: cover;
+            
+        }
+        h1,h2{
+            text-align: center;
+            margin: 20PX;
+            text-decoration: underline;
+            text-decoration: underline;
+            font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+   font-size: 40px;
+  font-style: normal;
+            
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .content img {
+            width: 500px;
+            height: auto;
+            border-radius: 50px;
+        }
+
+        .content:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .content:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .text {
+            max-width: 600px;
+            padding: 20px;
+            font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+   
+  font-style: normal;
+        }
+        .hipo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .first{
+            margin: 25px;
+            padding: 25px;
+        }
+        .second{
+           
+            margin: 25px;
+            padding: 25px;
+        }
+        .third{
+            
+            margin: 25px;
+            padding: 25px;
+         
+        }
+        .fourth{
+            
+            margin: 25px;
+            padding: 25px;
+            
+        }
+        .fifth{
+            
+            margin: 25px;
+            padding: 25px;
+        
+        }
+        .sixth{
+    
+            margin: 25px;
+            padding: 25px;
+            
+        }
+        .seventh{
+            
+            margin: 25px;
+            padding: 25px;
+            
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> The Hippopotamus</h1>
+        
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="first" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Portrait_Hippopotamus_in_the_water.jpg/330px-Portrait_Hippopotamus_in_the_water.jpg" alt="Image 2">
+            <div class="text">
+                <h2>Introduction</h2>
+                <p>The hippopotamus (Hippopotamus amphibius) (hɪpəˈpɒtəməs/; pl.: hippopotamuses; , also shortened to hippo (pl.: hippos), further qualified as the common hippopotamus, Nile hippopotamus, or river hippopotamus, is a large semiaquatic mammal native to sub-Saharan Africa. It is one of only two extant species in the family Hippopotamidae, the other being the pygmy hippopotamus (Choeropsis liberiensis or Hexaprotodon liberiensis). Its name comes from the ancient Greek for "river horse" (ἱπποπόταμος).
+
+                    After elephants and rhinoceroses, the hippopotamus is the next largest land mammal. It is also the largest extant land artiodactyl. </p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromRight">
+            <img class="second" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Hippopotamus_distribution.png/330px-Hippopotamus_distribution.png" alt="Image 2">
+            <div class="text">
+                <h2>Etymology</h2>
+                <p>The Latin word hippopotamus is derived from the ancient Greek ἱπποπόταμος (hippopótamos), from ἵππος (híppos) 'horse' and ποταμός (potamós) 'river', together meaning 'horse of the river'.[3][4][5] In English, the plural is "hippopotamuses".</p>
+            </div>
+        </div>
+
+       
+
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="third" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Hipop%C3%B3tamo_%28Hippopotamus_amphibius%29%2C_parque_nacional_de_Chobe%2C_Botsuana%2C_2018-07-28%2C_DD_60.jpg/300px-Hipop%C3%B3tamo_%28Hippopotamus_amphibius%29%2C_parque_nacional_de_Chobe%2C_Botsuana%2C_2018-07-28%2C_DD_60.jpg" alt="Image 4">
+            <div class="text">
+                <h2>Classification</h2>
+                <p>The modern hippopotamus and the pygmy hippopotamus are the only living members of the family Hippopotamidae. Some taxonomists place hippos and anthracotheres in the superfamily Anthracotheroidea. Hippopotamidae are classified along with other even-toed ungulates in the order Artiodactyla.<br>
+
+                    Five subspecies of hippos have been described based on morphological differences in their skulls as well as differences in geographical range:<br>
+                    
+                    H. a. amphibius – (the nominate subspecies) ranges from Gambia east to Ethiopia and then south to Mozambique and historically ranged as far north as Egypt; its skull is distinguished by a moderately reduced preorbital region, a bulging dorsal surface, elongated mandibular symphysis and larger chewing teeth.
+                  <br><strong>(i): H. a. kiboko – found in Kenya and Somalia; was noted to be smaller and more lightly coloured than other hippos with wider nostrils, somewhat longer snout and more rounded and relatively raised orbits with the space between them being incurved.</strong>
+                   <br><strong>(ii):H. a. capensis – found in Zambia and South Africa; distinguished by wider orbits.</strong>
+                    </p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromRight">
+            <img class="fourth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Anthracotherium_magnum.jpg/330px-Anthracotherium_magnum.jpg" alt="image-5">
+            <div class="text">
+                <h2>Evolution</h2>
+                <p>Until 1909, naturalists classified hippos together with pigs based on molar patterns. Several lines of evidence, first from blood proteins, then from molecular systematics,[12] DNA[13][14] and the fossil record, show their closest living relatives are cetaceans (whales, dolphins, and porpoises).[15][16] The common ancestor of hippos and whales branched off from Ruminantia and the rest of the even-toed ungulates; the cetacean and hippo lineages split soon afterwards.[13][16]
+
+                  
+                 
+                 Anthracotherium magnum from the Oligocene of Europe
+                 The most recent theory of the origins of Hippopotamidae suggests hippos and whales shared a common semiaquatic ancestor that branched off from other artiodactyls around 60 million years ago.[13][15] This hypothesised ancestral group likely split into two branches again around 54 million years ago.[12]
+                 
+                 One branch would evolve into cetaceans, possibly beginning about 52 million years ago, with the protowhale Pakicetus and other early whale ancestors collectively known as Archaeoceti. </p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="fifth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Malagasy_Hippopotamus.jpg/330px-Malagasy_Hippopotamus.jpg">
+            <div class="text">
+                <h2>Extinct species</h2>
+                <p>Three species of Malagasy hippopotamus became extinct during the Holocene on Madagascar, the last of them within the past 1,000 years. The Malagasy hippos were smaller than the modern hippo, a likely result of the process of insular dwarfism.[23] Fossil evidence indicates many Malagasy hippos were hunted by humans, a factor in their eventual extinction.[23] Isolated individual Malagasy hippos may have survived in remote pockets; in 1976, villagers described a living animal called the kilopilopitsofy, which may have been a Malagasy hippo.[24]
+
+                    Hippopotamus gorgops from the Early Pleistocene-early Middle Pleistocene of Africa and West Asia grew considerably larger than the living hippopotamus, with an estimated body mass of over 4,000 kg (8,800 lb).</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromRight">
+            <img class="sixth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Hippopotamus_in_San_Diego_Zoo.jpg/330px-Hippopotamus_in_San_Diego_Zoo.jpg">
+            <div class="text">
+                <h2>Characteristics</h2>
+                <p>The hippopotamus is a megaherbivore and is exceeded in size among land animals only by elephants and some rhinoceros species. The mean adult weight is around 1,480 kg (3,260 lb) for bulls and 1,365 kg (3,009 lb) for cows. Exceptionally large males have been recorded reaching 2,660 kg (5,860 lb).[30] Male hippos appear to continue growing throughout their lives, while females reach maximum weight at around age 25.[31] It is 2.90 to 5.05 m (9 ft 6 in to 16 ft 7 in) long,[32] including a tail of about 35 to 56 cm (14 to 22 in) in length and 1.30 to 1.65 m (4 ft 3 in to 5 ft 5 in) tall at the shoulder,[33][34] with males and females ranging 1.40 to 1.65 m (4 ft 7 in to 5 ft 5 in) and 1.30 to 1.45 m (4 ft 3 in to 4 ft 9 in) tall at the shoulder respectively.[34] The species has a typical head-body length of 3.3–3.45 m (10.8–11.3 ft) and an average standing height of 1.4 m (4 ft 7 in) at the shoulder.[35]
+
+                    Hippos have barrel-shaped bodies with short tails and legs, and an hourglass-shaped skull with a long snout.[36][7]: 3, 19  Their skeletal structures are graviportal, adapted to carrying their enormous weight,[7]: 8  and their dense bones and low centre of gravity allows them to sink and move along the bottom of the water.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img  class="seventh" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Hippovictora.png/330px-Hippovictora.png">
+            <div class="text">
+                <h2>Distribution and Status</h2>
+                <p>Hippopotamus amphibius arrived in Europe around 560-460,000 years ago, during the Middle Pleistocene.[50] The distribution of Hippopotamus amphibius in Europe during the Pleistocene was largely confined to Southern Europe, including the Iberian Peninsula,[51] Italy,[52][53] and Greece,[54] but extended into northwestern Europe, including Great Britain (as far north as North Yorkshire), the Netherlands, and western Germany during interglacial periods, such as the Last Interglacial (130–115,000 years ago).[55][56][57] The youngest records of the species in Europe are from the Late Pleistocene of Greece, dating to around 40-30,000 years ago.[54][51]
+
+                    Archaeological evidence exists of its presence in the Levant, dating to less than 3,000 years ago.[58][59] The species was common in Egypt's Nile region during antiquity, but it has since been driven out. According to Pliny the Elder, in his time, the best location in Egypt for capturing this animal was in the Saite nome;[60] the animal could still be found along the Damietta branch of the Nile after the Arab Conquest in 639. Reports of the slaughter of the last hippo in Natal Province were made at the end of the 19th century.[61] Hippos are still found in the rivers and lakes of the northern Democratic Republic of the Congo, Uganda, Tanzania, and Kenya, north through to Ethiopia, Somalia, and Sudan, west to The Gambia, and south to South Africa.</p>
+                   
+            </div>
+        </div>
+        <h2 class="head">Here's a Short Discovery Video For You</h2>
+        <div class="hipo">
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/pL3RakTl_hc?si=x7LSpY0WDoJogtyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Function to check if the element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scroll event and apply animations
+        function handleScroll() {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                if (isInViewport(content)) {
+                    content.style.animationName = content.getAttribute('data-animation');
+                }
+            });
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        // Run the function on page load as well
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>

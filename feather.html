@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Card Gallery with Links</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('images/3GALLERY.jpeg');
+          background-position: center;
+        background-size: cover;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90vw;
+            height: 90vh;
+            overflow: hidden;
+        }
+
+        .card {
+            position: relative;
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            transition: flex 0.5s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            text-align: center;
+            border-radius: 50px;
+            gap: 20px;
+            border: 2px solid transparent;
+            margin-left: 2.5px;
+            margin-right: 2.5px;
+
+        }
+
+        .card:hover {
+            flex: 4;
+            font-size: 24px;
+        }
+
+        .card a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Individual card images */
+        .card-1 { background-image: url('https://i.pinimg.com/474x/81/a1/cd/81a1cdc939d9efde3f610e2e4399ceb7.jpg'); }
+        .card-2 { background-image: url('https://i.pinimg.com/474x/6c/4d/38/6c4d38146b0a1ec215ca3297c8c0ac3d.jpg'); }
+        .card-3 { background-image: url('https://i.pinimg.com/474x/10/bd/4b/10bd4bc9595491bead6f952919ccf425.jpg'); }
+        .card-4 { background-image: url('https://i.pinimg.com/474x/dd/67/e3/dd67e31aed75817207119464d050b1cf.jpg'); }
+        .card-5 { background-image: url('https://i.pinimg.com/474x/9d/67/d5/9d67d544ba617bc7d14016f8b741211b.jpg'); }
+        .card-6 { background-image: url('https://i.pinimg.com/474x/3d/79/5e/3d795e4b78867adc7bfe17b8b1ca3545.jpg'); }
+        .card-7 { background-image: url('https://i.pinimg.com/474x/1f/4f/fe/1f4ffe290e11d8022780f566ecef0287.jpg'); }
+        .card-8 { background-image: url('https://i.pinimg.com/474x/bb/ca/cf/bbcacfc8edb32d64acb9dcb7a68ae054.jpg'); }
+        .card-9 { background-image: url('https://i.pinimg.com/474x/fd/92/32/fd9232fbf96fcbe4d73db7bc70c66c1b.jpg'); }
+        .card-10 { background-image: url('https://i.pinimg.com/474x/18/38/76/183876da0e675d41499f8fa14f23ec20.jpg'); }
+        .card-11 { background-image: url('https://i.pinimg.com/474x/78/91/cb/7891cb7055dad483f7b44c26b9c1b34b.jpg'); }
+        .card-12 { background-image: url('https://c8.alamy.com/comp/MFFPB2/siberian-crane-ringed-grus-leucogeranus-bharatpur-national-park-uttar-pradesh-northern-india-MFFPB2.jpg'); }
+        .card-13 { background-image: url('https://i.pinimg.com/474x/ac/2b/4b/ac2b4b0419239c58a7f0cf7a8a3a6c10.jpg'); }
+        .card-14 { background-image: url('https://i.pinimg.com/474x/3b/93/20/3b9320b3f81c343ff74cf66d63f800a9.jpg'); }
+        .card-15 { background-image: url('https://i.pinimg.com/474x/e0/ed/72/e0ed727d34774940c370fa63eca93913.jpg'); }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+                height: auto;
+            }
+            .card {
+                flex: 1;
+                width: 100%;
+            }
+            .card:hover {
+                flex: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>EXPLORE THE FEATHERED KINGDOM</h1>
+    <div class="gallery">
+        <!-- 15 Cards with Links -->
+        <div class="card card-1">
+            <a href="bat.html" target="_blank">BAT</a>
+        </div>
+        <div class="card card-2">
+            <a href="peacock.html" target="_blank">PEACOCK</a>
+        </div>
+        <div class="card card-3">
+            <a href="owl.html" target="_blank">OWL</a>
+        </div>
+        <div class="card card-4">
+            <a href="toucan.html" target="_blank">TOUCAN</a>
+        </div>
+        <div class="card card-5">
+            <a href="eagle.html" target="_blank">EAGLE</a>
+        </div>
+        <div class="card card-6">
+            <a href="seagull.html" target="_blank">SEAGULL</a>
+        </div>
+        <div class="card card-7">
+            <a href="duck.html" target="_blank">WILD DUCK</a>
+        </div>
+        <div class="card card-8">
+            <a href="spoonbilled.html" target="_blank">SPOON BILLED SANDPIPER</a>
+        </div>
+        <div class="card card-9">
+            <a href="imperialamazon.html" target="_blank">IMPERIAL AMAZON</a>
+        </div>
+        <div class="card card-10">
+            <a href="condor.html" target="_blank">CALIFORNIA CONDOR</a>
+        </div>
+        <div class="card card-11">
+            <a href="balimyna.html" target="_blank">BALI MYNA</a>
+        </div>
+        <div class="card card-12">
+            <a href="crane.html" target="_blank">SIBERIANCRANE</a>
+        </div>
+        <div class="card card-13">
+            <a href="hornbill.html" target="_blank">HORNBILL</a>
+        </div>
+        <div class="card card-14">
+            <a href="warbler.html" target="_blank">KRITLAND WARBLER</a>
+        </div>
+        <div class="card card-15">
+            <a href="adjuantstork.html" target="_blank">GREATER ADJUANT STORK</a>
+        </div>
+    </div>
+</body>
+</html>

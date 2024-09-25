@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Animated Website with Scroll Delay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+    
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           background-image: url('https://tse3.mm.bing.net/th?id=OIP.AFEds3f5UZH80GE_F1DWcQHaEy&pid=Api&P=0&h=220');
+           background-position: center;
+           background-size: cover;
+        }
+        h1,h2{
+            text-align: center;
+            margin: 20px;
+            text-decoration: underline;
+            font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+   font-size: 40px;
+  font-style: normal;
+          
+}
+        
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+         border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .content img {
+           width: 350px;
+            height: auto;
+            border-radius: 50px;
+        }
+       
+      
+       
+        .content:nth-child(odd) {
+            flex-direction: row;
+            
+        }
+
+        .content:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .text {
+            max-width: 600px;
+            
+            padding: 10px;
+            color: #000;
+            text-align: center;
+            font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+   
+  font-style: normal;
+        }
+        .short{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 40px;
+        }
+        .first{
+            
+            margin: 25px;
+            padding: 25px;
+        }
+        .second{
+           
+            margin: 25px;
+            padding: 25px;
+            
+        }
+        .third{
+            
+            margin: 25px;
+            padding: 25px;
+            
+         
+        }
+        .fourth{
+            
+            margin: 25px;
+            padding: 25px;
+        }
+        .fifth{
+           
+            margin: 25px;
+            padding: 25px;
+            
+        
+        }
+        .sixth{
+            
+            margin: 25px;
+            padding: 25px;
+            
+        }
+        .seventh{
+            
+            margin: 25px;
+            padding: 25px;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>THE GIRAFFE</h1>
+    <div class="container">
+        
+        <div class="content" data-animation="slideInFromRight">
+            <img class="first" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_Mikumi_National_Park.jpg/800px-Giraffe_Mikumi_National_Park.jpg" alt="Image 2">
+            <div class="text">
+                <h2>Intrpduction</h2>
+                <p>The giraffe is a large African hoofed mammal belonging to the genus Giraffa. It is the tallest living terrestrial animal and the largest ruminant on Earth. Traditionally, giraffes have been thought of as one species, Giraffa camelopardalis, with nine subspecies. Most recently, researchers proposed dividing them into four extant species due to new research into their mitochondrial and nuclear DNA, and individual species can be distinguished by their fur coat patterns. Seven other extinct species of Giraffa are known from the fossil record.
+
+                    The giraffe's distinguishing characteristics are its extremely long neck and legs, horn-like ossicones, and spotted coat patterns. </p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="second" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Giraffa_camelopardis_distribution_2018.png/330px-Giraffa_camelopardis_distribution_2018.png" alt="Image 2">
+            <div class="text">
+                <h2>Etymology</h2>
+                <p>The name "giraffe" has its earliest known origins in the Arabic word zarāfah (زرافة),[2] ultimately from Persian زُرنَاپَا (zurnāpā), a compound of زُرنَا (zurnā, "flute, zurna") and پَا (pā, "leg").[3][4] In early Modern English the spellings jarraf and ziraph were used, probably directly from the Arabic,[5] and in Middle English jarraf and ziraph, gerfauntz. The Italian form giraffa arose in the 1590s. The modern English form developed around 1600 from the French girafe.</p>
+            </div>
+        </div>
+
+       
+
+        <div class="content" data-animation="slideInFromRight">
+            <img class="third" src="https://i.pinimg.com/474x/ac/9d/ec/ac9dec8484d5ab1059cbe00201847aac.jpg" alt="Image 4">
+            <div class="text">
+                <h2>Evolution</h2>
+                <p>The giraffe is one of only two living genera of the family Giraffidae in the order Artiodactyla, the other being the okapi.[8] They are ruminants of the clade Pecora, along with Antilocapridae (pronghorns), Cervidae (deer), Bovidae (cattle, antelope, goats and sheep) and Moschidae (musk deer). A 2019 genome study (cladogram below) finds that Giraffidae are a sister taxon to Antilocapridae, with an estimated split of over 20 million years ago.The family Giraffidae was once much more extensive, with over 10 fossil genera described.[8] The elongation of the neck appears to have started early in the giraffe lineage. Comparisons between giraffes and their ancient relatives suggest vertebrae close to the skull lengthened earlier, followed by lengthening of vertebrae further down. </p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="fourth" src="https://i.pinimg.com/474x/57/b1/ca/57b1caf2b52309c5192981ee293862fd.jpg" alt="image-5">
+            <div class="text">
+                <h2>Species and subspecies</h2>
+                <p>The International Union for Conservation of Nature (IUCN) currently recognises only one species of giraffe with nine subspecies.[1]
+
+                    Carl Linnaeus originally classified living giraffes as one species in 1758. He gave it the binomial name Cervus camelopardalis. Mathurin Jacques Brisson coined the generic name Giraffa in 1762.[19] During the 1900s, various taxonomies with two or three species were proposed.[20] A 2007 study on the genetics of giraffes using mitochondrial DNA suggested at least six lineages could be recognised as species.[18] A 2011 study using detailed analyses of the morphology of giraffes, and application of the phylogenetic species concept, described eight species of living giraffes.[21] A 2016 study also concluded that living giraffes consist of multiple species. The researchers suggested the existence of four species, which have not exchanged genetic information between each other for 1 to 2 million years. </p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromRight">
+            <img class="fifth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Giraffe_skeleton.jpg/255px-Giraffe_skeleton.jpg">
+            <div class="text">
+                <h2>Anatomy</h2>
+                <p>Fully grown giraffes stand 4.3–5.7 m (14–19 ft) tall, with males taller than females.[47] The average weight is 1,192 kg (2,628 lb) for an adult male and 828 kg (1,825 lb) for an adult female.[48] Despite its long neck and legs, its body is relatively short.[49]: 66  The skin is mostly gray[48] or tan,[50] and can reach a thickness of 20 mm (0.79 in).[51]: 87  The 80–100 cm (31–39 in) long[37] tail ends in a long, dark tuft of hair and is used as a defense against insects.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromLeft">
+            <img class="sixth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/GiraffaRecurrEn.svg/330px-GiraffaRecurrEn.svg.png">
+            <div class="text">
+                <h2>Internal systems</h2>
+                <p>In mammals, the left recurrent laryngeal nerve is longer than the right; in the giraffe, it is over 30 cm (12 in) longer. These nerves are longer in the giraffe than in any other living animal;[79] the left nerve is over 2 m (6 ft 7 in) long.[80] Each nerve cell in this path begins in the brainstem and passes down the neck along the vagus nerve, then branches off into the recurrent laryngeal nerve which passes back up the neck to the larynx. Thus, these nerve cells have a length of nearly 5 m (16 ft) in the largest giraffes.[79] Despite its long neck and large skull, the brain of the giraffe is typical for an ungulate.[81] Evaporative heat loss in the nasal passages keep the giraffe's brain cool.</p>
+            </div>
+        </div>
+        <div class="content" data-animation="slideInFromRight">
+            <img class="seventh" src="https://i.pinimg.com/474x/3e/79/97/3e7997919951af768ef92b023cd2ce6b.jpg">
+            <div class="text">
+                <h2>Behaviour and ecology</h2>
+                <p>Giraffes usually inhabit savannahs and open woodlands. They prefer areas dominated by Acacieae, Commiphora, Combretum and Terminalia tree over Brachystegia which are more densely spaced.[34]: 322  The Angolan giraffe can be found in desert environments.[88] Giraffes browse on the twigs of trees, preferring those of the subfamily Acacieae and the genera Commiphora and Terminalia,[89] which are important sources of calcium and protein to sustain the giraffe's growth rate.[8] They also feed on shrubs, grass and fruit.[34]: 324  A giraffe eats around 34 kg (75 lb) of plant matter daily.[44] When stressed, giraffes may chew on large branches, stripping them of bark.[34]: 325  Giraffes are also recorded to chew old bones.</p>
+            </div>
+        </div>
+        
+    </div>
+    <h2 class="head">Here's a Short Discovery Video For You</h2>
+    <div class="short">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KNmdrOf7MwU?si=oXnW8szdC0LdAq-V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // Function to check if the element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scroll event and apply animations
+        function handleScroll() {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                if (isInViewport(content)) {
+                    content.style.animationName = content.getAttribute('data-animation');
+                }
+            });
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        // Run the function on page load as well
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>
