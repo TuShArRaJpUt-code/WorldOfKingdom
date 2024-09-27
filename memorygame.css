@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://i.pinimg.com/474x/13/bb/09/13bb0947d64611b165c25d813c4da8a8.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    text-decoration: underline #000;
+    
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    
+}
+.card img {
+    width: 100%;  /* Adjust width */
+    height: 100%; /* Adjust height */
+    border-radius: 10px;
+    display: none; /* Initially hide the image */
+   
+}
+.card.flipped img {
+    display: block; /* Show image when card is flipped */
+    transition: transfrom 0.6s;
+}
+
+.card.flipped {
+    background-color: #4caf50;
+    color: white;
+    transform: rotateY('180deg');
+}
+
+
+#restartButton {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+#restartButton:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+#restartButton:active {
+    color: #000
+}
+
+#restartButton:active:after {
+    background: transparent;
+}
+
+#restartButton:hover:before {
+    opacity: 1;
+}
+
+#restartButtonr:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.back{
+    width: 80px;
+    height: 30px;
+    background-color: yellowgreen;
+    color: #f4f4f4;
+    border-radius: 20px;
+}
+.back:hover{
+    transform: scale(1.2);
+}

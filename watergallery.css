@@ -1,0 +1,110 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('images/2GALLERY.jpeg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90vw;
+            height: 90vh;
+            overflow: hidden;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+            margin-left: 10px;
+
+        }
+
+        .card {
+            position: relative;
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            transition: flex 0.5s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            text-align: center;
+            border-radius: 50px;
+            gap: 20px;
+            border: 2px solid transparent;
+            margin-left: 2.5px;
+            margin-right: 2.5px;
+
+        }
+
+        .card:hover {
+            flex: 4;
+            font-size: 24px;
+        }
+
+        .card a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Individual card images */
+        .card-1 { background-image: url('images/seahorse.jpg'); }
+        .card-2 { background-image: url('images/irdolphin.jpg'); }
+        .card-3 { background-image: url('images/whale.jpg'); }
+        .card-4 { background-image: url('images/shark.jpg'); }
+        .card-5 { background-image: url('images/dolphin.jpg'); }
+        .card-6 { background-image: url('images/jellyfish.jpg'); }
+        .card-7 { background-image: url('images/octopus.jpg'); }
+        .card-8 { background-image: url('images/stingray.jpg'); }
+        .card-9 { background-image: url('images/eel.jpg'); }
+        .card-10 { background-image: url('images/goblin.jpg'); }
+        .card-11 { background-image: url('images/vaquita.jpg'); }
+        .card-12 { background-image: url('images/axolatl.jpg'); }
+        .card-13 { background-image: url('images/squid.jpg'); }
+        .card-14 { background-image: url('images/devilhole.jpg'); }
+        .card-15 { background-image: url('images/sawfish.jpg'); }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+                height: auto;
+            }
+            .card {
+                flex: 1;
+                width: 100%;
+            }
+            .card:hover {
+                flex: 2;
+            }
+        }
+   
