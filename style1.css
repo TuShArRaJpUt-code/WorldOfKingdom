@@ -120,3 +120,30 @@ transition: all 0.3s ease-in-out;
         font-size: 24px;
     }
 }
+
+.home-link{
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    display: inline-flex;
+    transition: tranform 0.3s ease, color 0.3s ease;
+}
+.home-link:hover{
+    color: #ff6600;
+    transform: scale(1.1);
+}
+.home-link:hover{
+    animation: rotateIcon 0.6s ease-in-out;
+}
+@keyframes rotateIcon {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
