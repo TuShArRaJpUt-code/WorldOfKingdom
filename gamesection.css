@@ -27,15 +27,17 @@ body {
     
     
 }
-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    color: #fff;
-    margin-left: 10px;
-}
-
+h1,h2{
+    text-align: center;
+    margin: 20px;
+    text-decoration: underline;
+    font-family: "Playpen Sans", cursive;
+font-optical-sizing: auto;
+font-size: 40px;
+font-style: normal;
+color: #000;
+margin-top: 80px;
+  
 .card {
     position: relative;
     flex: 1;
